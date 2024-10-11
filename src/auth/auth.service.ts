@@ -94,22 +94,22 @@ export class AuthService {
 
 		res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
 			httpOnly: true,
-			domain: 'localhost',
+			domain: 'planner.ilyacode.ru',
 			expires: expiresIn,
 			secure: true,
 			// lax if production
-			sameSite: 'none'
+			sameSite: 'lax'
 		})
 	}
 
 	removeRefreshTokenFromResponse(res: Response) {
 		res.cookie(this.REFRESH_TOKEN_NAME, '', {
 			httpOnly: true,
-			domain: 'localhost',
+			domain: 'planner.ilyacode.ru',
 			expires: new Date(0),
 			secure: true,
 			// lax if production
-			sameSite: 'none'
+			sameSite: 'lax'
 		})
 	}
 }

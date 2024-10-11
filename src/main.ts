@@ -8,11 +8,11 @@ async function bootstrap() {
 	app.setGlobalPrefix('api')
 	app.use(cookieParser())
 	app.enableCors({
-		origin: ['http://localhost:3001'],
+		origin: ['https://planner.ilyacode.ru'],
 		credentials: true,
 		exposedHeaders: 'set-cookie'
 	})
 
-	await app.listen(4200)
+	await app.listen(3954)
 }
 bootstrap()
